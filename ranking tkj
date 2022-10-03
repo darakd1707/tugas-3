@@ -1,0 +1,56 @@
+package tugasburatih;
+
+import java.util.Scanner;
+
+public class tugas10 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int urutan = 1;
+        String ulang = "";
+        System.out.println("Daftar Ranking 5 besar Kelas TKJ Angkatan 31 SMK Telkom Malang");
+        do {
+            System.out.print("Masukkan kelas yang diinginkan(XT1-XT5): ");
+            String kelas = input.next();
+            //daftar siswa terbaik
+            String a[] = {"Tio", "Tia", "Adi", "Ani", "Kia"};
+            String b[] = {"Mia", "Fay", "Lia", "Hani", "Tika"};
+            String c[] = {"Joni", "Jono", "Jeni", "Jihan", "Fani"};
+            String d[] = {"Mita", "Tina", "Koko", "Kiki", "Rani"};
+            String e[] = {"Rina", "Vina", "Nova", "Novi", "Navis"};
+
+            if (kelas.equalsIgnoreCase("XT1")) {
+                for (String siswa : a) {
+                    System.out.println("Murid terbaik " + urutan + ": " + siswa);
+                    urutan++;
+                }
+            }
+            if (kelas.equalsIgnoreCase("XT2")) {
+                for (String siswa1 : b) {
+                    System.out.println("Murid terbaik " + urutan + ": " + siswa1);
+                    urutan++;
+                }
+            }
+            if (kelas.equalsIgnoreCase("XT3")) {
+                for (String siswa2 : c) {
+                    System.out.println("Murid terbaik " + urutan + ": " + siswa2);
+                    urutan++;
+                }
+            }
+            if (kelas.equalsIgnoreCase("XT4")) {
+                for (String siswa3 : d) {
+                    System.out.println("Murid terbaik " + urutan + ": " + siswa3);
+                    urutan++;
+                }
+            }
+            if (kelas.equalsIgnoreCase("XT5")) {
+                for (String siswa4 : e) {
+                    System.out.println("Murid terbaik " + urutan + ": " + siswa4);
+                    urutan++;
+                }
+            }
+            System.out.println("Mau mengulang?");
+            ulang = input.next();
+        } while (ulang.equalsIgnoreCase("Iya"));
+    }
+}
